@@ -11,8 +11,5 @@ public class EnveloApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(EnveloApplication.class, args);
-        Scanner scan = new Scanner(System.in);
-
-        String quote = sca
     }
 }
