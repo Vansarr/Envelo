@@ -1,6 +1,5 @@
 package com.kanye.client;
 
-import com.kanye.config.KanyeConfig;
 import com.kanye.domain.QuoteDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -13,10 +12,11 @@ import java.net.URI;
 @Component
 public class QuoteClient {
 
-    private final KanyeConfig kanyeConfig;
+//    private final KanyeConfig kanyeConfig;
     private final RestTemplate restTemplate;
 
     public QuoteDto getQuote() {
+        // I couldn't inject beans into main class, so I hard-coded API url in the method making kanyeConfig kinda obsolete
         URI url = UriComponentsBuilder.fromHttpUrl("https://api.kanye.rest/")
                 .build()
                 .encode()

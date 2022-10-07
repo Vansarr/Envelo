@@ -1,7 +1,6 @@
 package com;
 
 import com.kanye.client.QuoteClient;
-import com.kanye.config.KanyeConfig;
 import com.kanye.service.QuoteService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,9 +15,8 @@ public class KanyeApp {
     public static void main(String[] args) {
         SpringApplication.run(KanyeApp.class, args);
 
-        var kanyeConfig = new KanyeConfig();
         var restTemplate = new RestTemplate();
-        var quoteClient = new QuoteClient(kanyeConfig, restTemplate);
+        var quoteClient = new QuoteClient(restTemplate);
         var quoteService = new QuoteService(quoteClient);
 
         var console = new Scanner(System.in);
