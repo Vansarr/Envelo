@@ -17,13 +17,11 @@ public class QuoteClient {
     private final RestTemplate restTemplate;
 
     public QuoteDto getQuote() {
-        URI url = UriComponentsBuilder.fromHttpUrl(kanyeConfig.getKanyeApiEndpoint())
+        URI url = UriComponentsBuilder.fromHttpUrl("https://api.kanye.rest/")
                 .build()
                 .encode()
                 .toUri();
 
-    QuoteDto quoteResponse = restTemplate.getForObject(url, QuoteDto.class);
-
-    return quoteResponse;
+        return restTemplate.getForObject(url, QuoteDto.class);
     }
 }

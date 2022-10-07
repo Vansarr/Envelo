@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class XChecker {
 
+    // time complexity is O(log n)
+    // space complexity is O(1)
     private static boolean checkForX(int[] numbers, int x){
         Arrays.sort(numbers);
         for (int i = 0; i < numbers.length / 2; i++) {
