@@ -1,0 +1,16 @@
+1.A) Interfejsy podobnie jak klasy abstrakcyjne używane są do uzyskania abstrakcji, chociaż klasa abstrakcyjna może
+zawierać implementacje metod, a nie tylko ich sygnatury abstrakcyjne.
+Klasa abstrakcyjna może służyć jako baza dla innych klas, ponieważ klasy potomne dziedziczą wszystkie jej zachowania.
+Interfejs może służyć jako interfejs funkcyjny, służący do implementowania wyrażeń lambda.
+Klasy mogą implementować więcej niż jeden interfejs, natomiast dziedziczyć mogą tylko po jednej klasie abstrakcyjnej.
+
+1.B) Tablice są liniowymi strukturami pozwalającymi zgrupować takie same elementy w sposób ciągły, natomiast
+lista liniowa jest klasą implementującą interfejs Collections, który wprowadza do listy metody charakterystyczne
+dla kolekcji takie jak add(), remove(), contains(). Lista liniowa należy do kolekcji uporządkowanych.
+
+Główne różnice między tablicami a listami to:
+Wymiarowość - tablice mogą być jedno- lub wierowymiarowe, podczas gdy listy są zawsze jednowymiarowe, chociaż listy mogą zawierać w sobie inne listy.
+Rozmiar - tablice mają konkretną z góry zdefiniowaną wielkość, a listy są pod tym względem dynamiczne i mogą być powiększane lub zmniejszane.
+Szybkość operacji - tablice ze względu na swój predefiniowany rozmiar są szybsze niż listy.
+przechowywanie podstawowych typów danych - tablice mogą je przechowywać, podczas gdy listy wymagają "ubrania" ich w obiekt
+dodawanie elementów - do tablic przypisujemy elementy, natomiast do listy dodajemy obiekty metodą add().
